@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basis Data Pegawai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #111827;
+            --primary-hover: #374151;
+            --background: #f9fafb;
+            --surface: #ffffff;
+            --surface-border: #e5e7eb;
+            --text-main: #111827;
+            --text-muted: #6b7280;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--background);
+            color: var(--text-main);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--surface-border);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        .action-area {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+        }
+
+        button:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* --- Table Styling Minimalist --- */
+        .table-container {
+            width: 100%;
+            max-width: 1200px;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 12px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03);
+            overflow-x: auto; /* Untuk responsivitas mobile */
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 700px;
+        }
+
+        th {
+            background-color: #f9fafb;
+            color: var(--text-muted);
+            font-weight: 500;
+            padding: 16px 24px;
+            font-size: 13px;
+            border-bottom: 1px solid var(--surface-border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 16px 24px;
+            color: var(--text-main);
+            font-size: 15px;
+            border-bottom: 1px solid var(--surface-border);
+        }
+
+        tbody tr {
+            transition: background-color 0.2s ease;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none; /* Hilangkan garis di baris paling bawah */
+        }
+
+        tbody tr:hover {
+            background-color: #f3f4f6;
+        }
+
+        .skeleton {
+            background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 37%, #f3f4f6 63%);
+            background-size: 400% 100%;
+            animation: skeleton-loading 1.4s ease infinite;
+        }
+
+        .skeleton-text {
+            height: 14px;
+            border-radius: 4px;
+        }
+
+        @keyframes skeleton-loading {
+            0% { background-position: 100% 50%; }
+            100% { background-position: 0 50%; }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        #error-msg {
+            color: #b91c1c;
+            text-align: left;
+            padding: 16px 20px;
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            font-weight: 400;
+            font-size: 14px;
+            display: none;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dasbor Perusahaan</h1>
+        <div style="font-size: 14px; color: var(--text-muted);">
+            Ringkasan Direktori Pegawai
+        </div>
+    </header>
+
+    <div class="action-area">
+        <button id="btn-tampilkan">
+            Tampilkan Data
+        </button>
+    </div>
+
+    <div id="error-msg"></div>
+    
+    <!-- Wrapper Tabel -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 5%;">No</th>
+                    <th style="width: 35%;">Nama Pegawai</th>
+                    <th style="width: 35%;">Pekerjaan</th>
+                    <th style="width: 25%;">Lokasi</th>
+                </tr>
+            </thead>
+            <!-- Body Tabel: Tempat data dinamis akan dimuat oleh JS -->
+            <tbody id="hasil-profil">
+                <!-- Empty State Dibuat di dalam Row Data (Colspan) -->
+                <tr id="empty-state">
+                    <td colspan="4" style="text-align: center; padding: 80px 20px; color: var(--text-muted);">
+                        <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin-bottom: 15px; color: #d1d5db;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                        </svg>
+                        <h2 style="margin: 0 0 10px; color: var(--text-main); font-weight: 500; font-size: 18px;">Belum Ada Data Tersedia</h2>
+                        <p style="margin: 0; font-size: 14px;">Silakan klik tombol di atas untuk memuat daftar pegawai ke dalam tabel.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<script>
+    const btnTampilkan = document.getElementById('btn-tampilkan');
+    const tableBody = document.getElementById('hasil-profil');
+    const errorMsg = document.getElementById('error-msg');
+    const emptyState = document.getElementById('empty-state');
+
+    function getSkeletonRows(count) {
+        let html = '';
+        for(let i=0; i<count; i++) {
+            html += `
+            <tr>
+                <td><div class="skeleton skeleton-text" style="width: 24px; margin: 0;"></div></td>
+                <td><div class="skeleton skeleton-text" style="width: 140px; margin: 0;"></div></td>
+                <td><div class="skeleton skeleton-text" style="width: 180px; margin: 0;"></div></td>
+                <td><div class="skeleton skeleton-text" style="width: 120px; margin: 0;"></div></td>
+            </tr>`;
+        }
+        return html;
+    }
+
+    btnTampilkan.addEventListener('click', function() {
+        btnTampilkan.innerHTML = `Mengambil Data...`;
+        btnTampilkan.disabled = true;
+        errorMsg.style.display = 'none';
+
+        if(emptyState) emptyState.style.display = 'none';
+        
+        // Tampilkan 6 baris loading skeleton
+        tableBody.innerHTML = getSkeletonRows(6);
+
+        fetch('data.php')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Terjadi kesalahan koneksi ke server HTTP: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(dataList => {
+                setTimeout(() => {
+                    tableBody.innerHTML = ''; // Hapus skeleton
+                    
+                    dataList.forEach((data, index) => {
+                        const tr = document.createElement('tr');
+                        
+                        // Efek muncul secara bergantian (Stagger fadeIn)
+                        tr.style.opacity = 0;
+                        tr.style.animation = `fadeIn 0.4s ease forwards ${index * 0.05}s`;
+
+                        tr.innerHTML = `
+                            <td>${index + 1}</td>
+                            <td style="font-weight: 500;">${data.nama}</td>
+                            <td>${data.pekerjaan}</td>
+                            <td>${data.lokasi}</td>
+                        `;
+                        
+                        tableBody.appendChild(tr);
+                    });
+
+                    btnTampilkan.innerHTML = `Refresh Direktori`;
+                    btnTampilkan.disabled = false;
+                    
+                }, 500); 
+            })
+            .catch(error => {
+                console.error('Error fetching API:', error);
+                
+                tableBody.innerHTML = '';
+                if(emptyState) {
+                    emptyState.style.display = 'table-row';
+                    tableBody.appendChild(emptyState);
+                }
+                
+                errorMsg.textContent = "Server Error: Gagal memuat API dari data.php. Pastikan server PHP aktif.";
+                errorMsg.style.display = 'block';
+                
+                btnTampilkan.innerHTML = 'Coba Lagi';
+                btnTampilkan.disabled = false;
+            });
+    });
+
+    const styleSheet = document.createElement("style");
+    styleSheet.innerText = `
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    `;
+    document.head.appendChild(styleSheet);
+
+</script>
+
+</body>
+</html>
