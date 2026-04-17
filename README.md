@@ -19,27 +19,14 @@ Source code Tugas Praktikum Mata Kuliah Aplikasi Berbasis Platform (ABP) Kelas P
 
 ### Preview Pertemuan 05
 
-<p align="center"><b>Page Login</b></p>
-<p align="center">
-  <img src="2311102043_Pertemuan05/preview_login.png">
-</p>
+| <p align="center"><b>Page Login</b></p> | <p align="center"><b>Page Produk</b></p> |
+|----------------------------------------|-----------------------------------------|
+| <p align="center"><img src="2311102043_Pertemuan05/preview_login.png" width="300"></p> | <p align="center"><img src="2311102043_Pertemuan05/preview_produk.png" width="300"></p> |
 
-<p align="center"><b>Page Produk</b></p>
-<p align="center">
-  <img src="2311102043_Pertemuan05/preview_produk.png">
-</p>
+| <p align="center"><b>Page Add</b></p> | <p align="center"><b>Page Edit</b></p> |
+|--------------------------------------|---------------------------------------|
+| <p align="center"><img src="2311102043_Pertemuan05/preview_add_produk.png" width="300"></p> | <p align="center"><img src="2311102043_Pertemuan05/preview_edit_produk.png" width="300"></p> |
 
-<p align="center"><b>Page Add</b></p>
-<p align="center">
-  <img src="2311102043_Pertemuan05/preview_add_produk.png">
-</p>
-
-<p align="center"><b>Page Edit</b></p>
-<p align="center">
-  <img src="2311102043_Pertemuan05/preview_edit_produk.png">
-</p>
-
-<p align="center"><b>Page Delete</b></p>
-<p align="center">
-  <img src="2311102043_Pertemuan05/preview_delete_produk.png">
-</p>
+| <p align="center"><b>Page Delete</b></p> |  |
+|----------------------------------------|--|
+| <p align="center"><img src="2311102043_Pertemuan05/preview_delete_produk.png" width="300"></p> |  |
