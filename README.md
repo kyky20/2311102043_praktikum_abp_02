@@ -19,8 +19,8 @@ Source code Tugas Praktikum Mata Kuliah Aplikasi Berbasis Platform (ABP) Kelas P
 
 ### Preview Pertemuan 05
 
-![Preview Hasil](2311102043_Pertemuan05/preview_login)
-![Preview Hasil](2311102043_Pertemuan05/preview_produk)
-![Preview Hasil](2311102043_Pertemuan05/preview_add_produk)
-![Preview Hasil](2311102043_Pertemuan05/preview_edit_produk)
-![Preview Hasil](2311102043_Pertemuan05/preview_delete_produk)
+![Preview Hasil](2311102043_Pertemuan05/preview_login.png)
+![Preview Hasil](2311102043_Pertemuan05/preview_produk.png)
+![Preview Hasil](2311102043_Pertemuan05/preview_add_produk.png)
+![Preview Hasil](2311102043_Pertemuan05/preview_edit_produk.png)
+![Preview Hasil](2311102043_Pertemuan05/preview_delete_produk.png)
