@@ -24,7 +24,10 @@ Project ini dibuat untuk menampilkan beberapa widget dasar pada Flutter.
 
 ## Screenshot Hasil
 
-<div align="center">
-  <img src="screenshot/preview_1.png" width="45%" />
-  <img src="screenshot/preview_2.png" width="45%" />
-</div>
+<p align="center">
+  <img src="2311102043_Pertemuan07/screenshot/preview_1.png" width="350">
+</p>
+
+<p align="center">
+  <img src="2311102043_Pertemuan07/screenshot/preview_2.png" width="350">
+</p>
