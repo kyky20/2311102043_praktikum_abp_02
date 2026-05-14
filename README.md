@@ -57,9 +57,10 @@ Source code Tugas Praktikum Mata Kuliah Aplikasi Berbasis Platform (ABP) Kelas P
 <hr>
 
 
-### Preview Pertemuan 04
+### Preview Pertemuan 07
 
-![Preview Hasil](2311102043_Pertemuan07/screenshot/preview_1.png)
-<hr>
-![Preview Hasil](2311102043_Pertemuan07/screenshot/preview_2.png)
+<div align="center">
+  <img src="2311102043_Pertemuan07/screenshot/preview_1.png" width="350"/>
+  <img src="2311102043_Pertemuan07/screenshot/preview_2.png" width="350"/>
+</div>
 
