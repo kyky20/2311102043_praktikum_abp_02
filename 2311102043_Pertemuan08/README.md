@@ -26,8 +26,6 @@ Aplikasi Flutter sederhana untuk mengambil foto menggunakan Camera API, memilih 
 
 ## Screenshot
 
-*(Simpan file screenshot Anda di dalam folder `screenshots` dengan nama yang sesuai di bawah ini agar gambar otomatis muncul di Markdown)*
-
 ### 1. Izin Aplikasi (Permissions)
 ![Screenshot Permission](screenshot/preview_1.png)
 
