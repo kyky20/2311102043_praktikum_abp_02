@@ -4,7 +4,11 @@ Aplikasi Flutter sederhana untuk praktikum Provider dan Firebase Cloud Messaging
 
 ## Laporan
 
-<embed src="laporan%20Pertemuan%209%20dan%2010.pdf" type="application/pdf" width="100%" height="600px" />
+![Laporan Pertemuan 9 dan 10 - Halaman 1](screenshots/laporan_pertemuan_9_10-1.png)
+
+![Laporan Pertemuan 9 dan 10 - Halaman 2](screenshots/laporan_pertemuan_9_10-2.png)
+
+[Lihat file PDF laporan](laporan%20Pertemuan%209%20dan%2010.pdf)
 
 ## Fitur
 
