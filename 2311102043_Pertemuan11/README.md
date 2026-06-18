@@ -24,26 +24,34 @@ Aplikasi ini merupakan implementasi sederhana State Management menggunakan **Flu
 
 ```text
 lib/
-├── main.dart
-├── home_page.dart
-├── cart_cubit.dart
-├── cart_state.dart
-└── product.dart
+|-- main.dart
+|-- home_page.dart
+|-- cart_cubit.dart
+`-- product.dart
 ```
 
 ## Hasil Aplikasi
-## Hasil 1
+
+### Hasil 1
+
 ![Preview Hasil](screenshots/hasil1.png)
-## Hasil 2
+
+### Hasil 2
+
 ![Preview Hasil](screenshots/hasil2.png)
 
 ## Laporan
-## Page 1
+
+### Page 1
+
 ![Preview Hasil](screenshots/laporan_1.png)
-## page 2
+
+### Page 2
+
 ![Preview Hasil](screenshots/laporan_2.png)
 
 [Lihat file PDF laporan](Laporan_pertemuan11.pdf)
+
 ## Cara Menjalankan
 
 1. Clone repository.
