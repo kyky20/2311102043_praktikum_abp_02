@@ -38,11 +38,12 @@ lib/
 ![Preview Hasil](screenshots/hasil2.png)
 
 ## Laporan
-
+## Page 1
 ![Preview Hasil](screenshots/laporan_1.png)
-## .
+## page 2
 ![Preview Hasil](screenshots/laporan_2.png)
 
+[Lihat file PDF laporan](laporan_pertemuan11.pdf)
 ## Cara Menjalankan
 
 1. Clone repository.
