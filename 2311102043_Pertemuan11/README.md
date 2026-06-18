@@ -40,6 +40,7 @@ lib/
 ## Laporan
 
 ![Preview Hasil](screenshots/laporan_1.png)
+##
 ![Preview Hasil](screenshots/laporan_2.png)
 
 ## Cara Menjalankan
