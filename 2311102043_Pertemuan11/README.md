@@ -33,13 +33,13 @@ lib/
 
 ## Hasil Aplikasi
 
-screenshots/hasil1.png
-screenshots/hasil2.png
+![Preview Hasil](screenshots/hasil1.png)
+![Preview Hasil](screenshots/hasil2.png)
 
 ## Laporan
 
-screenshots/laporan_1.png
-screenshots/laporan_2.png
+![Preview Hasil](screenshots/laporan_1.png)
+![Preview Hasil](screenshots/laporan_2.png)
 
 ## Cara Menjalankan
 
