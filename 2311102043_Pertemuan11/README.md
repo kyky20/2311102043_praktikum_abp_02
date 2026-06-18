@@ -43,7 +43,7 @@ lib/
 ## page 2
 ![Preview Hasil](screenshots/laporan_2.png)
 
-[Lihat file PDF laporan](laporan_pertemuan11.pdf)
+[Lihat file PDF laporan](Laporan_pertemuan11.pdf)
 ## Cara Menjalankan
 
 1. Clone repository.
