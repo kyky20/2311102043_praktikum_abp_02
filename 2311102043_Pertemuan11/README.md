@@ -32,8 +32,9 @@ lib/
 ```
 
 ## Hasil Aplikasi
-
+## Hasil 1
 ![Preview Hasil](screenshots/hasil1.png)
+## Hasil 2
 ![Preview Hasil](screenshots/hasil2.png)
 
 ## Laporan
